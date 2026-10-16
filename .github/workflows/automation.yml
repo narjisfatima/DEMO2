@@ -4,10 +4,12 @@ on:
     branches: 
       - main
       - feature/demo 
+  schedule:
+    - cron: '50 11 * * *'   #minute hour day month day-of-week
 
   pull_request:
     branches: 
-      -main
+      - main
 
   workflow_dispatch:
 
@@ -29,7 +31,7 @@ jobs:
 
     - name: Run CFIN and RMS tests
       run: npx playwright test
-      
+
     - uses: actions/upload-artifact@v4
       if: ${{ !cancelled() }}
       with:
