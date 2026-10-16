@@ -5,7 +5,7 @@ on:
       - main
       - feature/demo 
   schedule:
-    - cron: '45 11 * * *'   #minute hour day month day-of-week
+    - cron: '50 11 * * *'   #minute hour day month day-of-week
 
   pull_request:
     branches: 
