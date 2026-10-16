@@ -4,9 +4,13 @@ on:
     branches: 
       - main
       - feature/demo 
-  schedule:
-    - cron: '50 11 * * *'   #minute hour day month day-of-week
+  # schedule:
+  #   - cron: '50 11 * * *'
+     #minute hour day month day-of-week
 
+  schedule:
+    - cron: '40 17 * * *'
+      timezone: 'Asia/Kolkata'
   pull_request:
     branches: 
       - main
